@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVaultHQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f5f5, #ccc);
+            color: #000;
+            animation: gradientAnimation 20s infinite alternate;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 50%;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+
+        .content h1 {
+            color: #007bff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 100%;
+                text-align: center;
+                margin-top: 50px;
+                margin-left: 0;
+            }
+
+            .large-logo img {
+                height: 150px;
+                margin-top: 20px;
+            }
+        }
+
+        .section {
+            padding: 20px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section .content {
+            max-width: 50%;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .section .content h1 {
+            color: #007bff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section .content p {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .section .image-content {
+            max-width: 50%;
+            text-align: right;
+        }
+
+        .section .image-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sobre-mim {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+
+        .sobre-mim .content {
+            max-width: 60%;
+            margin-right: 20px;
+        }
+
+        .sobre-mim .image-content {
+            max-width: 40%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .sobre-mim .image-content img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Registration Form Styles */
+        .registration-form {
+            display: flex;
+            width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form .form-left {
+            background-color: #007bff;
+            color: white;
+            padding: 40px;
+            border-radius: 10px 0 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+        }
+
+        .registration-form .form-left h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .registration-form .form-left button {
+            background-color: #fff;
+            color: #007bff;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .registration-form .form-right {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+        }
+
+        .registration-form .form-right h2 {
+            font-size: 24
+
+
+
+
+continue
+ChatGPT
+px;
+margin-bottom: 20px;
+}
+
+
+    .registration-form .form-right input {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .registration-form .form-right button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding:10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .registration-form .error-message {
+        color: red;
+        margin-top: 10px;
+    }
+
+    /* ONU Section Styles */
+    .onu-section .content h1 {
+        color: #007bff;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .onu-section .content p {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .onu-section .image-content {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .onu-section .image-content img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Button Styles */
+    .fixed-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .registration-form {
+            flex-direction: column;
+            width: 90%;
+        }
+
+        .registration-form .form-left {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .registration-form .form-right {
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Captura de tela 2024-05-30 162102.png" alt="Logo do Site GameVault">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#registration-section">Registre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1> GameVaultHQ</h1>
+            <p>GameVault é o seu destino final para tudo relacionado a jogos.<br> 
+                Descubra análises, notícias e discussões sobre os mais recentes lançamentos.<br> 
+                Junte-se para uma experiência imersiva e emocionante no universo dos videogames.</p>
+            <p>Estamos empolgados para tê-lo(a) conosco nesta jornada!</p>
+            <button onclick="scrollToWelcome()">Bem-vindo ao site</button>
+        </div>
+        <div class="image-content">
+            <img src="img/Captura de tela 2024-05-30 162102.png" alt="GameVaultHQ Logo Grande">
+        </div>
+    </main>
+    <section id="welcome-section" class="section">
+        <div class="content">
+            <h1>Bem-Vindo ao Site</h1>
+            <p>Navegue pelo portal definitivo para os amantes dos videogames.</p>
+            <p>Aqui, mergulhe em análises detalhadas, fique por dentro das últimas notícias do mundo dos jogos e conecte-se com uma comunidade apaixonada.</p>
+            <p>Prepare-se para uma experiência imersiva e emocionante no universo dos videogames.</p>
+            <p>Estamos empolgados para tê-lo(a) conosco nesta jornada!</p>
+            <p><a href="#sobre">Sobre o Site GameVault</a></p>
+        </div>
+        <div class="image-content">
+            <img src="https://via.placeholder.com/300" alt="GameVaultHQ Logo Grande">
+        </div>
+    </section>
+    <section id="sobre-mim" class="sobre-mim">
+        <div class="content">
+            <h1>Sobre mim</h1>
+            <p>Desde que era pequeno, sempre me diverti muito jogando videogame.<br>
+                Meus pais e meus irmãos se divertiam com os jogos de diversos estilos,<br>
+                e isso para mim se intensificou cada vez mais.<br>
+                Essa influência familiar fez com que eu desenvolvesse um verdadeiro gosto pelos videogames.<br>
+                E até hoje, continuo desfrutando bastante tempo e eles,<br>
+                sempre em busca de diversão e desafios.</p>
+        </div>
+        <div class="image-content">
+            <img src="images/sobre_mim.png" alt="Imagem relacionada" style="width: 100%; max-width: 500px;">
+        </div>
+    </section>
+    <section id="registration-section" class="registration-form">
+        <div class="form-left">
+            <h2>GameVaultHQ</h2>
+            <button onclick="window.location.href='login.html'">Ir para Login</button>
+        </div>
+        <div class="form-right">
+            <h2>Criar Conta</h2>
+            <input type="text" id="nomeInput" placeholder="Nome">
+            <input type="email" id="emailInput" placeholder="Email">
+            <input type="password" id="senhaInput" placeholder="Senha">
+            <div class="buttons-container">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </section>
+    <section id="onu-section" class="onu-section">
+        <div class="content">
+            <h1>O que pode ser bom para ONU</h1>
+            <ul>
+                <li><strong>Redução das Desigualdades (ODS10):</strong></li>
+                <li>Acessibilidade: Desenvolver e promover jogos e consoles para pessoas com deficiências.</li>
+                <li>Oferecer suporte técnico e orientação para desenvolvedores que desejam tornar seus jogos mais inclusivos.</li>
+                <li>Representação: Garantir que o conteúdo do site represente uma diversidade de culturas e comunidades, promovendo a inclusão de todos os jogadores.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="img/images.jpg" alt="ONU Image" style="width: 40%; height: auto;">
+        </div>
+    </section>
+    <button class="fixed-button" onclick="scrollToTop()">Bem-vindo ao site</button>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    function cadastrar() {
+        var nome = document.getElementById('nomeInput').value;
+        var email = document.getElementById('emailInput').value;
+        var senha = document.getElementById('senhaInput').value;
+        var errorMessage = document.getElementById('errorMessage');
+
+        if (nome.trim() === '' || email.trim() === '' || senha.trim() === '') {
+            errorMessage.textContent = 'Por favor, preencha todos os campos.';
+
+            } else {
+                errorMessage.textContent = '';
+
+                // Aqui você pode adicionar a lógica para enviar o formulário, se necessário
+                // Por exemplo, enviar uma requisição AJAX para
+
+                alert('Formulário enviado com sucesso!');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToWelcome() {
+            document.querySelector('#welcome-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

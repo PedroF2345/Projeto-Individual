@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Jogos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        #gameList {
+            text-align: left;
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+        }
+        #gameList li {
+            margin-bottom: 10px;
+            color: #007bff; /* Alterado para azul */
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button-jogados {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .button-nao-jogados {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button class="button button-jogados" onclick="displayJogosJogados()">Jogos Jogados</button>
+            <button class="button button-nao-jogados" onclick="displayJogosNaoJogados()">Jogos Não Jogados</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="gameChart"></canvas>
+        </div>
+        <ul id="gameList"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Dados de exemplo (substitua pelos dados reais)
+        var gameData = {
+            labels: ['Jogado', 'Não Jogado'],
+            datasets: [{
+                label: 'Quantidade de Jogos',
+                data: [6, 3], // Substitua pelos valores reais
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configurações do gráfico
+        var chartOptions = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Dados dos jogos jogados e não jogados (substitua pelos dados reais)
+        var jogosJogados = ['Minecraft', 'GTA5', 'Call of Duty', 'Fallout', 'FIFA', 'Fortnite'];
+        var jogosNaoJogados = ['Elden Ring', 'Lethal Company', 'Spider-Man 2'];
+
+        // Criar gráfico
+        var ctx = document.getElementById('gameChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: gameData,
+            options: chartOptions
+        });
+
+        // Função para exibir os jogos jogados
+        function displayJogosJogados() {
+            displayJogos(jogosJogados);
+        }
+
+        // Função para exibir os jogos não jogados
+        function displayJogosNaoJogados() {
+            displayJogos(jogosNaoJogados);
+        }
+
+        // Função para exibir os jogos na lista
+        function displayJogos(jogos) {
+            var list = document.getElementById('gameList');
+            list.innerHTML = ''; // Limpar a lista antes de adicionar os jogos
+            jogos.forEach(function(jogo) {
+                var listItem = document.createElement('li');
+                listItem.textContent = jogo;
+                list.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

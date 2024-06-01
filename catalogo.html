@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Jogos - GameVaultHQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #000;
+            position: relative;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .container {
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 15px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .view-more-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more-button:hover {
+            background-color: #0056b3;
+        }
+
+        .games-catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .game {
+            width: 30%;
+            margin-bottom: 40px;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .game h2 {
+            font-size: 20px;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .game p {
+            font-size: 16px;
+            color: black;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .gta h2 {
+            background-image: url('img/gta-v-rp-heres-what-you-may-like-to-know-about-what-is-it-how-to-play-and-more.webp');
+        }
+
+        .minecraft h2 {
+            background-image: url('img/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f.avif');
+        }
+
+        .callofduty h2 {
+            background-image: url('img/glbimg.com-po-tt-f-300x200-2012-11-19-blackops2.webp');
+        }
+
+        .fifa h2 {
+            background-image: url('img/transferir.jpg');
+        }
+
+        .fallout h2 {
+            background-image: url('img/images (2).jpg');
+        }
+
+        .fortnite h2 {
+            background-image: url('img/transferir.png');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Jogos</h1>
+    </header>
+    <a href="ffff.html" class="back-button">Voltar</a>
+    <a href="catalogo+.html" class="view-more-button">Ver mais</a>
+    <div class="container">
+        <div class="games-catalog">
+            <div class="game gta">
+                <h2>GTA</h2>
+                <p>Grand Theft Auto é uma série de jogos eletrônicos de ação-aventura desenvolvida pela Rockstar North.</p>
+            </div>
+            <div class="game minecraft">
+                <h2>Minecraft</h2>
+                <p>Minecraft é um jogo eletrônico de sandbox desenvolvido e publicado pela Mojang Studios.</p>
+            </div>
+            <div class="game callofduty">
+                <h2>Call of Duty</h2>
+                <p>Call of Duty é uma série de jogos eletrônicos de tiro em primeira pessoa publicada pela Activision.</p>
+            </div>
+            <div class="game fifa">
+                <h2>FIFA</h2>
+                <p>FIFA é uma série de videogames de simulação de futebol publicada pela Electronic Arts sob a marca EA Sports.</p>
+            </div>
+            <div class="game fallout">
+                <h2>Fallout</h2>
+                <p>Fallout é uma série de jogos eletrônicos de RPG ambientados em um futuro pós-apocalíptico.</p>
+            </div>
+            <div class="game fortnite">
+                <h2>Fortnite</h2>
+                <p>Lançado em 2017, o jogo apresenta diferentes modos de jogo, incluindo o popular modo Battle Royale, onde até 100 jogadores competem para ser o último sobrevivente em uma ilha enquanto constroem estruturas e procuram por armas e recursos para se defender.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 GameVaultHQ</p>
+    </footer>
+</body>
+</html>
